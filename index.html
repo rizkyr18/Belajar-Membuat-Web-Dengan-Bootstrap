@@ -1,0 +1,329 @@
+<!-- Belajar bootstrap -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mencoba Bootstrap</title>
+
+    <!-- CSS only -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- menggunakan CDN Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- saat link dibuka, akan diarahkan langsung ke css milik bootstrap -->
+    <!-- CDN akan berfungsi ketika kita terconnect ke internet, jika tidak terconnect ke internet maka CDN tidak akan jalan/tampilan web akan hancur -->
+    <!-- benefit = otomatis update -->
+
+</head>
+<style>
+    .carousel-contain {
+        background-image: url(bg.jpg);
+        background-color: gray;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .text {
+        color: white;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .navbar {
+        background-color: #4682B4;
+        height: 80px;
+    }
+
+    .carousel-caption {
+        border-radius: 10px;
+        background-color: gray;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .card {
+        border: groove;
+    }
+
+    .title {
+        font-style: Bold;
+        font-size: 25px;
+    }
+
+    section h2 {
+        text-align: center;
+        padding: 20px;
+        color: #4682B4;
+        font-style: bold;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .about p {
+        color: #4682B4;
+        word-spacing: 2px;
+        line-height: 25px;
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        font-style: bold;
+        font-size: 25px;
+    }
+
+    section h1 {
+        text-align: center;
+        padding: 20px;
+        color: blue;
+        font-style: bold;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+</style>
+
+<body>
+    <div>
+        <!-- navbar start -->
+        <nav class="navbar navbar-expand-lg bg-light navbar-collapse">
+            <!-- menggunakan bootstrap - navbar -->
+
+            <!-- Navbar Content -->
+            <div class="container-fluid">
+                <a class="navbar-brand" id="brand">
+                    <img class="mx mx-5" src="logo.jpg" alt="" width="70">Ramdhani
+                    Comp
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item mx-5">
+                            <a class="nav-link active" aria-current="page" href="#">HOME</a>
+                        </li>
+                        <li class="nav-item mx-5">
+                            <a class="nav-link" href="#about">ABOUT</a>
+                        </li>
+                        <li class="nav-item mx-5">
+                            <a class="nav-link" href="#biaya">BIAYA</a>
+                        </li>
+                        <li class="nav-item dropdown mx-5">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                JASA
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#product">Rakit PC</a></li>
+                                <li><a class="dropdown-item" href="#product">Tune Up</a></li>
+                                <li><a class="dropdown-item" href="#product">Service/Upgrade</a></li>
+                            </ul>
+
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!-- navbar end -->
+
+        <!-- carousel start -->
+        <div>
+            <!-- menggunakan bootstrap - carousel -->
+            <div class="container-fluid carousel-contain py-5 bg-dark">
+                <div class="container">
+                    <h2 class="text text-center">Ramdhani Comp</h2>
+                    <!-- carousel with control -->
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                        <!-- carousel with indicators -->
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="rakit.png" class="d-block w-100" alt="...">
+                                <!-- carousel with captions -->
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5 class="title">Rakit PC</h5>
+                                    <p>Jasa Rakit PC Sampe Jadi</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="tuneup.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5 class="title">Tune Up</h5>
+                                    <p>Tune Laptop/PC agar performa lebih joss</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="service.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5 class="title">Service/Upgrade</h5>
+                                    <p>Service atau Upgrade Laptop/PC</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+            <!-- carousel end -->
+
+            <br><br>
+
+            <!-- about & biaya start -->
+            <section class="about" id="about">
+                <div class="container">
+                    <h2>ABOUT</h2>
+                    <p>Ramdhani Comp merupakan penyedia jasa yang bergerak di bidang IT khususnya per-komputeran.</p>
+                    <br>
+                    <p>Kami menyediakan jasa yang di antaranya adalah : Rakit PC, Tune Up Laptop / PC, Service dan
+                        Upgrade Laptop / PC</p>
+                    <br>
+                    <p>Tidak hanya itu, di Ramdhani Comp juga menyediakan beberapa keperluan penunjang per-komputeran
+                        anda diantaranya :</p>
+                    <br>
+                    <p>Sparepart Laptop, PC Desktop, Acessories Komputer, Printer, Scanner, Mouse Kabel, Mouse
+                        Wireless, Keyboard Kabel, Keyboard Wireless, Keyboard Mechanical, Joystick, Kabel Konverter, USB
+                        Port, dll</p>
+                    <br>
+                    <p>Jam Kerja : 08.00 - 21.00</p>
+                    <p>Buka Setiap Hari Kecuali Hari Kiamat</p>
+
+                    <br><br><br>
+
+                    <h2 id="biaya">BIAYA</h2>
+                    <p>Rakit PC : 3 - 20 Juta (Tergantung Jeroan CPU yang digunakan)</p>
+                    <br>
+                    <p>Tune UP : 200 Ribu (Bongkar Mesin, Pengecekan, Cleaning, Repasta)</p>
+                    <br>
+                    <p>Service & Upgrade : 100 - 5 Juta (Tergantung dari kerusakan dan Harga barang penunjang upgrade)
+                    </p>
+                </div>
+            </section>
+            <!-- about & biaya finish -->
+
+            <br><br><br>
+
+            <!-- Produk saya start -->
+            <section class="product" id="product">
+                <div class="container">
+                    <h1>Jasa Yang di Sediakan di Ramdhani Comp</h1>
+
+                    <div class="card-group">
+                        <div class="card col-sm-4 mx-3 text-center">
+                            <img src="rakit.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Rakit PC</h5>
+                                <p class="card-text">Jasa perakitan PC sesuka dan semaumu sesuai kebutuhan</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                <a href="https://feedmeemore.rizkyramdhani9.repl.co/" class="btn btn-primary">Contact
+                                    Me</a>
+                            </div>
+                        </div>
+                        <div class="card col-sm-4 mx-3 text-center">
+                            <img src="tuneup.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Tune Up</h5>
+                                <p class="card-text">Tune Up Laptop/PC mu agar mendapatkan performa yang mantap layaknya
+                                    baru</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                <a href="https://feedmeemore.rizkyramdhani9.repl.co/" class="btn btn-primary">Contact
+                                    Me</a>
+                            </div>
+                        </div>
+                        <div class="card col-sm-4 mx-3 text-center">
+                            <img src="service.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Service/Upgrade</h5>
+                                <p class="card-text">Pelayanan service untuk perangkat anda yang bermasalah, dan juga
+                                    jasa upgrade agar perangkatmu mendapatkan performa yang lebih baik</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                <a href="https://feedmeemore.rizkyramdhani9.repl.co/" class="btn btn-primary">Contact
+                                    Me</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <br><br><br>
+            <!-- Produk saya end -->
+
+            <!-- <div class="text-center">
+                <div class="row">
+                    <div class="card col-sm-6">
+                        <h5 class="card-header">Rakit PC</h5>
+                        <img src="rakit.png" class="img-thumbnail" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Jasa Rakit PC Sampe Jadi</h5>
+                            <p class="card-text">Jasa perakitan PC sesuka dan semaumu sesuai kebutuhan </p>
+                            <a href="https://feedmeemore.rizkyramdhani9.repl.co/" class="btn btn-primary">Contact
+                                Me</a>
+                        </div>
+                    </div>
+
+                    <div class="card col-sm-6">
+                        <h5 class="card-header">Tune Up</h5>
+                        <img src="tuneup.jpg" class="img-thumbnail" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Tune Laptop/PC agar performa lebih joss</h5>
+                            <p class="card-text">Tune Up Laptop/PC mu agar mendapatkan performa yang mantap layaknya
+                                baru</p>
+                            <a href="https://feedmeemore.rizkyramdhani9.repl.co/" class="btn btn-primary">Contact
+                                Me</a>
+                        </div>
+                    </div>
+
+                    <div class="card col-sm-6">
+                        <h5 class="card-header">Service/Upgrade</h5>
+                        <img src="service.jpg" class="img-thumbnail" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Service atau Upgrade Laptop/PC</h5>
+                            <p class="card-text">Pelayanan service untuk perangkat anda yang bermasalah, dan juga
+                                jasa
+                                upgrade agar perangkatmu mendapatkan performa yang lebih baik
+                            </p>
+                            <a href="https://feedmeemore.rizkyramdhani9.repl.co/" class="btn btn-primary">Contact
+                                Me</a>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+        </div>
+
+        <!-- <button class="tanpa-bootstrap">Hello World!</button>
+        <br>
+        <button class="btn btn-primary">Hello Bootstrap!</button> -->
+        <!--  btn artinya button, btn-primary artinya warna button nya menjadi warna utama dari sebuah tema bootstrap (tema default = biru) -->
+        <!-- walaupun di style css tidak ada class, karena sudah connect ke link CDN bootstrap,otomatis kita bakal punya css class dari bootstrap. -->
+
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
+            </script>
+</body>
+
+</html>
